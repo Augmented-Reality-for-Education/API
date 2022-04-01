@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArForEducationWebApi", "ArForEducationWebApi\ArForEducationWebApi.csproj", "{EDEFD10E-7507-4777-B1AE-5E6F010BB482}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDEFD10E-7507-4777-B1AE-5E6F010BB482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDEFD10E-7507-4777-B1AE-5E6F010BB482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDEFD10E-7507-4777-B1AE-5E6F010BB482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDEFD10E-7507-4777-B1AE-5E6F010BB482}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
