@@ -5,6 +5,7 @@ namespace ArForEducationWebApi.Services.Interfaces;
 
 public interface IImageService
 {
-    public IEnumerable<Image> GetAll();
-    public Task<Image> CreateAsync(CreateImageDto input);
+    IEnumerable<ImageMetaDataDto> GetAll();
+    Task<Image> CreateAsync(CreateImageDto input);
+    Task<Image> GetAsync(long imageId);
 }

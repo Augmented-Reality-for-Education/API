@@ -17,9 +17,18 @@ public class ImageService : IImageService
         _mapper = mapper;
     }
     
-    public IEnumerable<Image> GetAll()
+    public IEnumerable<ImageMetaDataDto> GetAll()
     {
-        return _unitOfWork.ImageRepository.GetAll().ToList();
+        var images = _unitOfWork.ImageRepository.GetAll();
+        
+        // Manually mapping here to avoid loading dataURLs from the database
+        return images.Select(i => new ImageMetaDataDto
+        {
+            Created = i.Created,
+            Id = i.Id,
+            LastModified = i.LastModified,
+            Name = i.Name
+        });
     }
 
     public async Task<Image> CreateAsync(CreateImageDto input)
@@ -28,5 +37,10 @@ public class ImageService : IImageService
         newImage = await _unitOfWork.ImageRepository.InsertAsync(newImage);
         await _unitOfWork.SaveAsync();
         return newImage;
+    }
+
+    public Task<Image> GetAsync(long imageId)
+    {
+        return _unitOfWork.ImageRepository.GetByIdAsync(imageId);
     }
 }

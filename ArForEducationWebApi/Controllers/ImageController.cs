@@ -21,6 +21,13 @@ public class ImageController : ControllerBase
         return Ok(_imageService.GetAll());
     }
 
+    [HttpGet("{id:long}")]
+    public async Task<IActionResult> Get(long id)
+    {
+        var image = await _imageService.GetAsync(id);
+        return Ok(image);
+    }
+
     [HttpPut]
     public async Task<IActionResult> Put(CreateImageDto input)
     {
