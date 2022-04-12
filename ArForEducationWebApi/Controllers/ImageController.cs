@@ -34,4 +34,11 @@ public class ImageController : ControllerBase
         var newImage = await _imageService.CreateAsync(input);
         return Ok(newImage);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Post(CreateImageDto input)
+    {
+        var newImage = await _imageService.CreateAsync(input);
+        return Ok(newImage);
+    }
 }
