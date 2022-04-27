@@ -6,6 +6,8 @@ namespace ArForEducationWebApi.Data;
 public class DatabaseContext : DbContext
 {
     public DbSet<Image> Images { get; set; }
+    public DbSet<Sequence> Sequences { get; set; }
+
 
     public DatabaseContext(DbContextOptions options) : base(options)
     {
