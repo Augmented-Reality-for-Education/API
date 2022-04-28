@@ -17,26 +17,6 @@ public class SequenceController : ControllerBase
         _sequenceService = sequenceService;
     }
 
-    //[HttpGet]
-    //public IActionResult Get()
-    //{
-    //    return Ok(_sequenceService.GetAll());
-    //}
-
-    //[HttpGet("{id:long}")]
-    //public async Task<IActionResult> Get(long id)
-    //{
-    //    var image = await _sequenceService.GetAsync(id);
-    //    return Ok(image);
-    //}
-
-    //[HttpPut]
-    //public async Task<IActionResult> Put(CreateImageDto input)
-    //{
-    //    var newImage = await _sequenceService.CreateAsync(input);
-    //    return Ok(newImage);
-    //}
-
     [HttpPost]
     public async Task<IActionResult> Post(CreateSequenceDto input)
     {

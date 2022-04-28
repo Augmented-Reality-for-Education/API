@@ -23,11 +23,12 @@ public class SequenceService : ISequenceService
         {
             var newSequence = _mapper.Map<Sequence>(input);
             var sequence = await _unitOfWork.SequenceRepository.InsertAsync(newSequence);
-            
+            await _unitOfWork.SaveAsync();
+
             foreach (var img in input.Images)
             {
                 var newImage = _mapper.Map<Image>(img);
-                newImage.SequenceId = sequence.SequenceId;
+                newImage.SequenceId = sequence.Id;
                 await _unitOfWork.ImageRepository.InsertAsync(newImage);
             }
             await _unitOfWork.SaveAsync();
