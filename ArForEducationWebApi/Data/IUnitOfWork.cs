@@ -7,5 +7,6 @@ namespace ArForEducationWebApi.Data
         Task<int> SaveAsync();
 
         IImageRepository ImageRepository { get;  }
+        ISequenceRepository SequenceRepository { get; }
     }
 }

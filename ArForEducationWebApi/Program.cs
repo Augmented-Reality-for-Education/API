@@ -23,6 +23,7 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<ISequenceService, SequenceService>();
 
 var app = builder.Build();
 
