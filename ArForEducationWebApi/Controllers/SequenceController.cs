@@ -23,4 +23,11 @@ public class SequenceController : ControllerBase
         await _sequenceService.CreateAsync(input);
         return Ok();
     }
+
+    [HttpGet]
+    public IActionResult GetAll()
+    {
+        var sequences = _sequenceService.GetAll();
+        return Ok(sequences);
+    }
 }

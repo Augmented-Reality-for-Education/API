@@ -3,6 +3,7 @@ using ArForEducationWebApi.Domain;
 using ArForEducationWebApi.Dto.Sequence;
 using ArForEducationWebApi.Services.Interfaces;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ArForEducationWebApi.Services;
 
@@ -25,5 +26,10 @@ public class SequenceService : ISequenceService
             await _unitOfWork.SequenceRepository.InsertAsync(newSequence);
             await _unitOfWork.SaveAsync();
         }
+    }
+
+    public IEnumerable<Sequence> GetAll()
+    {
+        return _unitOfWork.SequenceRepository.GetAll();
     }
 }
