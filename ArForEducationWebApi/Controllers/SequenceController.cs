@@ -30,4 +30,11 @@ public class SequenceController : ControllerBase
         var sequences = _sequenceService.GetAll();
         return Ok(sequences);
     }
+    
+    [HttpGet("{id:long}")]
+    public async Task<IActionResult> Get(long id)
+    {
+        var sequence = await _sequenceService.GetAsync(id);
+        return Ok(sequence);
+    }
 }

@@ -7,4 +7,5 @@ public interface ISequenceService
 {
     Task CreateAsync(CreateSequenceDto input);
     IEnumerable<SequenceMetaDataDto> GetAll();
+    Task<Sequence> GetAsync(long id);
 }

@@ -44,4 +44,10 @@ public class SequenceService : ISequenceService
             })
         });
     }
+
+    public Task<Sequence> GetAsync(long id)
+    {
+
+        return _unitOfWork.SequenceRepository.GetById(id).Include(s => s.Images).FirstAsync();
+    }
 }
