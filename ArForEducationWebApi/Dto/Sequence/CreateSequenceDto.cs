@@ -1,5 +1,6 @@
-﻿namespace ArForEducationWebApi.Dto.Sequence;
-using ArForEducationWebApi.Dto.Image;
+﻿using ArForEducationWebApi.Dto.Image;
+
+namespace ArForEducationWebApi.Dto.Sequence;
 
 public class CreateSequenceDto
 {
