@@ -1,4 +1,4 @@
-name: Build and deploy ASP.Net Core app to Azure Web App - FoospowerServer
+name: Build and deploy ASP.Net Core app to Azure Web App
 
 on:
   push:
