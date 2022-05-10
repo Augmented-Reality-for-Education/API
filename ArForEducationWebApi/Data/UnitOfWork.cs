@@ -12,6 +12,7 @@ namespace ArForEducationWebApi.Data
         }
 
         public IImageRepository ImageRepository => new ImageRepository(_databaseContext);
+        public ISequenceRepository SequenceRepository => new SequenceRepository(_databaseContext);
 
         public Task<int> SaveAsync()
         {

@@ -19,7 +19,7 @@ public class ImageService : IImageService
     
     public IEnumerable<ImageMetaDataDto> GetAll()
     {
-        var images = _unitOfWork.ImageRepository.GetAll();
+        var images = _unitOfWork.ImageRepository.GetAll().Where(i => i.SequenceId == null);
         
         // Manually mapping here to avoid loading dataURLs from the database
         return images.Select(i => new ImageMetaDataDto
