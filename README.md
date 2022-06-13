@@ -1,6 +1,8 @@
 # ARDENT - An Augmented Reality Framework for Education
 This repository contains the Web API used in the ARDENT framework.
 
+Check out the [video demo](https://youtu.be/GXYz2oXtxzo).
+
 ## Setup
 
 This project is a simple .NET project using Entitiy Framework Core and a SQL database. To run it:
